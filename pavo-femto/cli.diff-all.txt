@@ -1,8 +1,8 @@
-# diff all
+diff all
 
 # version
-# Betaflight / STM32F405 (S405) 4.5.0 Dec 25 2024 / 08:01:31 (c155f5830) MSP API: 1.46
-# config rev: 16ac022
+# Betaflight / STM32F405 (S405) 4.5.2 Jun 30 2025 / 15:10:07 (751b63246) MSP API: 1.46
+# config rev: 24b283a
 
 # start the command batch
 batch start
@@ -13,11 +13,12 @@ defaults nosave
 board_name BETAFPVF405
 manufacturer_id BEFH
 mcu_id 0033002e3434470530373830
-signature
+signature 
 
-# name: Pavo Femto
+# name: FEMTO
 
 # feature
+feature -AIRMODE
 feature TELEMETRY
 feature LED_STRIP
 feature OSD
@@ -60,53 +61,68 @@ led 1 1,0::CO:10
 
 # aux
 aux 0 0 0 1700 2100 0 0
-aux 1 1 1 900 1300 0 0
-aux 2 2 1 1300 1700 0 0
-aux 3 13 2 1700 2100 0 0
-aux 4 35 3 1650 2100 0 0
+aux 1 1 1 1700 2100 0 0
+aux 2 13 3 1700 2100 0 0
+aux 3 26 2 1300 1700 0 0
+aux 4 28 1 900 1200 0 0
+aux 5 35 2 1700 2100 0 0
 
 # master
-set gyro_lpf1_static_hz = 0
-set gyro_lpf2_static_hz = 550
-set dyn_notch_count = 0
-set dyn_notch_q = 500
-set gyro_lpf1_dyn_min_hz = 0
+set gyro_lpf1_static_hz = 150
+set gyro_lpf2_static_hz = 300
+set dyn_notch_count = 2
+set dyn_notch_max_hz = 700
+set gyro_lpf1_dyn_min_hz = 150
+set gyro_lpf1_dyn_max_hz = 300
 set acc_calibration = -7,18,-15,1
 set baro_hardware = AUTO
-set dshot_idle_value = 1300
+set fpv_mix_degrees = 25
+set blackbox_sample_rate = 1/2
 set dshot_bidir = ON
 set motor_pwm_protocol = DSHOT300
 set motor_poles = 12
 set motor_output_reordering = 2,3,0,1,4,5,6,7
 set align_board_roll = 180
-set vbat_min_cell_voltage = 335
-set vbat_warning_cell_voltage = 345
+set vbat_max_cell_voltage = 440
+set vbat_min_cell_voltage = 310
+set vbat_warning_cell_voltage = 330
 set ibata_scale = 510
 set ibata_offset = -300
 set small_angle = 180
 set pid_process_denom = 2
-set simplified_gyro_filter_multiplier = 110
+set simplified_gyro_filter_multiplier = 60
 set osd_rssi_dbm_alarm = -100
-set osd_vbat_pos = 2561
+set osd_vbat_pos = 513
 set osd_rssi_pos = 192
-set osd_link_quality_pos = 2496
-set osd_rssi_dbm_pos = 2464
+set osd_link_quality_pos = 2624
+set osd_rssi_dbm_pos = 416
 set osd_rsnr_pos = 160
-set osd_tim_2_pos = 3629
-set osd_flymode_pos = 3598
-set osd_throttle_pos = 3566
-set osd_crosshairs_pos = 2361
-set osd_current_pos = 2592
-set osd_craft_name_pos = 2582
-set osd_warnings_pos = 14837
+set osd_tim_2_pos = 3695
+set osd_flymode_pos = 3665
+set osd_throttle_pos = 2592
+set osd_crosshairs_pos = 313
+set osd_current_pos = 544
+set osd_craft_name_pos = 3088
+set osd_pilot_name_pos = 2067
+set osd_warnings_pos = 14965
+set osd_avg_cell_voltage_pos = 2656
+set osd_disarmed_pos = 2646
 set osd_esc_tmp_pos = 129
+set osd_flip_arrow_pos = 3636
 set osd_core_temp_pos = 225
+set osd_log_status_pos = 2560
+set osd_rate_profile_name_pos = 2080
+set osd_pid_profile_name_pos = 2048
+set osd_stat_bitmask = 0
 set debug_mode = GYRO_SCALED
-set craft_name = Pavo Femto
+set rpm_filter_harmonics = 2
+set craft_name = FEMTO
+set pilot_name = JAMESCODESTHINGS
 
 profile 0
 
 # profile 0
+set profile_name = STOCK
 set dterm_lpf1_dyn_min_hz = 78
 set dterm_lpf1_dyn_max_hz = 157
 set dterm_lpf1_static_hz = 78
@@ -140,9 +156,117 @@ set tpa_breakpoint = 1320
 
 profile 1
 
+# profile 1
+set profile_name = BETTER
+set dterm_lpf1_dyn_min_hz = 78
+set dterm_lpf1_dyn_max_hz = 157
+set dterm_lpf1_static_hz = 78
+set dterm_lpf2_static_hz = 157
+set vbat_sag_compensation = 100
+set throttle_boost = 8
+set p_pitch = 90
+set i_pitch = 146
+set d_pitch = 95
+set f_pitch = 87
+set p_roll = 79
+set i_roll = 126
+set d_roll = 67
+set f_roll = 76
+set p_yaw = 79
+set i_yaw = 126
+set f_yaw = 76
+set d_min_roll = 67
+set d_min_pitch = 95
+set thrust_linear = 60
+set feedforward_averaging = 2_POINT
+set feedforward_smooth_factor = 60
+set feedforward_jitter_factor = 10
+set dyn_idle_min_rpm = 75
+set simplified_master_multiplier = 160
+set simplified_i_gain = 90
+set simplified_d_gain = 140
+set simplified_pi_gain = 110
+set simplified_dmax_gain = 0
+set simplified_feedforward_gain = 40
+set simplified_pitch_d_gain = 125
+set simplified_pitch_pi_gain = 110
+set simplified_dterm_filter_multiplier = 105
+set tpa_breakpoint = 1320
+
 profile 2
 
+# profile 2
+set profile_name = UAVMICRO
+set dterm_lpf1_dyn_min_hz = 90
+set dterm_lpf1_dyn_max_hz = 180
+set dterm_lpf1_static_hz = 90
+set dterm_lpf2_static_hz = 180
+set vbat_sag_compensation = 100
+set pidsum_limit = 1000
+set pidsum_limit_yaw = 1000
+set yaw_lowpass_hz = 0
+set throttle_boost = 8
+set p_pitch = 70
+set i_pitch = 126
+set d_pitch = 45
+set f_pitch = 187
+set p_roll = 67
+set i_roll = 120
+set f_roll = 180
+set p_yaw = 67
+set i_yaw = 120
+set f_yaw = 180
+set d_min_roll = 40
+set d_min_pitch = 45
+set thrust_linear = 60
+set feedforward_averaging = 2_POINT
+set feedforward_smooth_factor = 60
+set feedforward_jitter_factor = 10
+set dyn_idle_min_rpm = 75
+set simplified_master_multiplier = 150
+set simplified_d_gain = 90
+set simplified_dmax_gain = 0
+set simplified_dterm_filter_multiplier = 120
+set ez_landing_limit = 5
+
 profile 3
+
+# profile 3
+set profile_name = UAVWHOOP
+set dterm_lpf1_dyn_min_hz = 90
+set dterm_lpf1_dyn_max_hz = 180
+set dterm_lpf1_static_hz = 90
+set dterm_lpf2_static_hz = 180
+set vbat_sag_compensation = 100
+set anti_gravity_gain = 90
+set iterm_relax_cutoff = 5
+set pidsum_limit = 1000
+set pidsum_limit_yaw = 1000
+set yaw_lowpass_hz = 125
+set throttle_boost = 8
+set p_pitch = 75
+set i_pitch = 134
+set d_pitch = 76
+set f_pitch = 199
+set p_roll = 71
+set i_roll = 127
+set d_roll = 67
+set f_roll = 191
+set p_yaw = 71
+set i_yaw = 127
+set f_yaw = 191
+set d_min_roll = 67
+set d_min_pitch = 76
+set thrust_linear = 60
+set feedforward_averaging = 2_POINT
+set feedforward_smooth_factor = 60
+set feedforward_jitter_factor = 10
+set dyn_idle_min_rpm = 75
+set simplified_master_multiplier = 160
+set simplified_d_gain = 140
+set simplified_dmax_gain = 0
+set simplified_dterm_filter_multiplier = 120
+set ez_landing_limit = 5
 
 # restore original profile selection
 profile 0
@@ -150,25 +274,66 @@ profile 0
 rateprofile 0
 
 # rateprofile 0
-set roll_rc_rate = 5
-set pitch_rc_rate = 5
-set yaw_rc_rate = 5
-set roll_expo = 45
-set pitch_expo = 45
-set yaw_expo = 45
-set roll_srate = 72
-set pitch_srate = 72
-set yaw_srate = 54
+set rateprofile_name = 4550
+set thr_mid = 45
+set thr_expo = 50
+set roll_rc_rate = 12
+set pitch_rc_rate = 12
+set yaw_rc_rate = 12
+set roll_expo = 40
+set pitch_expo = 40
+set yaw_expo = 40
+set roll_srate = 73
+set pitch_srate = 73
 
 rateprofile 1
 
+# rateprofile 1
+set rateprofile_name = 5550
+set thr_mid = 55
+set thr_expo = 50
+set roll_rc_rate = 12
+set pitch_rc_rate = 12
+set yaw_rc_rate = 12
+set roll_expo = 40
+set pitch_expo = 40
+set yaw_expo = 40
+set roll_srate = 73
+set pitch_srate = 73
+
 rateprofile 2
 
+# rateprofile 2
+set rateprofile_name = 6550
+set thr_mid = 65
+set thr_expo = 50
+set roll_rc_rate = 12
+set pitch_rc_rate = 12
+set yaw_rc_rate = 12
+set roll_expo = 40
+set pitch_expo = 40
+set yaw_expo = 40
+set roll_srate = 73
+set pitch_srate = 73
+
 rateprofile 3
+
+# rateprofile 3
+set rateprofile_name = 7550
+set thr_mid = 75
+set thr_expo = 50
+set roll_rc_rate = 12
+set pitch_rc_rate = 12
+set yaw_rc_rate = 12
+set roll_expo = 40
+set pitch_expo = 40
+set yaw_expo = 40
+set roll_srate = 73
+set pitch_srate = 73
 
 # restore original rateprofile selection
 rateprofile 0
 
 # save configuration
 save
-#
+# 
