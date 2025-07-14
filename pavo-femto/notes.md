@@ -1,26 +1,32 @@
 
-# Pavo Femto Boards
+# Pavo Femto Notes
 
 ## ELRS
 
-Target: BETAFPV 2.4GHz AIO RX
-
-Stock version: 3.3
+| Prop          | Value                 |
+|---------------|-----------------------|
+| Target        | BETAFPV 2.4GHz AIO RX |
+| Stock version | 3.3                   |
 
 ## Flight Controller
 
-```bash
-# version
-# Betaflight / STM32F405 (S405) 4.5.0 Dec 25 2024 / 08:01:31 (c155f5830) MSP API: 1.46
-# config rev: 16ac022
-# board: manufacturer_id: BEFH, board_name: BETAFPVF405
-```
+| Prop             | Value                                   |
+|------------------|-----------------------------------------|
+| Stock Firmware   | Betaflight 4.5.0                        |
+| MCU              | STM32F405 (S405)                        |
+| Board            | BETAFPVF405                             |
 
 ## ESCs
 
-ESC: C-X-70
-Stock Firmware: Bluejay 0.19 @48KHz
+| Prop              | Value                |
+|-------------------|----------------------|
+| ESC               | C-X-70               |
+| Stock Firmware    | Bluejay 0.19 @ 48KHz |
+| Current Firmware  | Bluejay 0.21 @ 24KHz |
 
 ## Throttle Rates
 
-`45/50` on stock profile
+| Rate Type | Value |
+|-----------|-------|
+| Mid       | 0.45  |
+| Expo      | 0.50  |

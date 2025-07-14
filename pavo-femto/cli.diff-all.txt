@@ -1,7 +1,5 @@
-diff all
-
 # version
-# Betaflight / STM32F405 (S405) 4.5.2 Jun 30 2025 / 15:10:07 (751b63246) MSP API: 1.46
+# Betaflight / STM32F405 (S405) 4.5.2 Jul 12 2025 / 20:32:41 (norevision) MSP API: 1.46
 # config rev: 24b283a
 
 # start the command batch
@@ -13,7 +11,7 @@ defaults nosave
 board_name BETAFPVF405
 manufacturer_id BEFH
 mcu_id 0033002e3434470530373830
-signature 
+signature
 
 # name: FEMTO
 
@@ -163,7 +161,6 @@ set dterm_lpf1_dyn_max_hz = 157
 set dterm_lpf1_static_hz = 78
 set dterm_lpf2_static_hz = 157
 set vbat_sag_compensation = 100
-set throttle_boost = 8
 set p_pitch = 90
 set i_pitch = 146
 set d_pitch = 95
@@ -181,8 +178,8 @@ set thrust_linear = 60
 set feedforward_averaging = 2_POINT
 set feedforward_smooth_factor = 60
 set feedforward_jitter_factor = 10
-set dyn_idle_min_rpm = 75
-set simplified_master_multiplier = 160
+set dyn_idle_min_rpm = 35
+set simplified_master_multiplier = 150
 set simplified_i_gain = 90
 set simplified_d_gain = 140
 set simplified_pi_gain = 110
@@ -205,7 +202,6 @@ set vbat_sag_compensation = 100
 set pidsum_limit = 1000
 set pidsum_limit_yaw = 1000
 set yaw_lowpass_hz = 0
-set throttle_boost = 8
 set p_pitch = 70
 set i_pitch = 126
 set d_pitch = 45
@@ -218,11 +214,10 @@ set i_yaw = 120
 set f_yaw = 180
 set d_min_roll = 40
 set d_min_pitch = 45
-set thrust_linear = 60
 set feedforward_averaging = 2_POINT
 set feedforward_smooth_factor = 60
 set feedforward_jitter_factor = 10
-set dyn_idle_min_rpm = 75
+set dyn_idle_min_rpm = 35
 set simplified_master_multiplier = 150
 set simplified_d_gain = 90
 set simplified_dmax_gain = 0
@@ -243,7 +238,6 @@ set iterm_relax_cutoff = 5
 set pidsum_limit = 1000
 set pidsum_limit_yaw = 1000
 set yaw_lowpass_hz = 125
-set throttle_boost = 8
 set p_pitch = 75
 set i_pitch = 134
 set d_pitch = 76
@@ -257,11 +251,10 @@ set i_yaw = 127
 set f_yaw = 191
 set d_min_roll = 67
 set d_min_pitch = 76
-set thrust_linear = 60
 set feedforward_averaging = 2_POINT
 set feedforward_smooth_factor = 60
 set feedforward_jitter_factor = 10
-set dyn_idle_min_rpm = 75
+set dyn_idle_min_rpm = 40
 set simplified_master_multiplier = 160
 set simplified_d_gain = 140
 set simplified_dmax_gain = 0
@@ -274,8 +267,8 @@ profile 0
 rateprofile 0
 
 # rateprofile 0
-set rateprofile_name = 4550
-set thr_mid = 45
+set rateprofile_name = 2550
+set thr_mid = 25
 set thr_expo = 50
 set roll_rc_rate = 12
 set pitch_rc_rate = 12
@@ -289,8 +282,8 @@ set pitch_srate = 73
 rateprofile 1
 
 # rateprofile 1
-set rateprofile_name = 5550
-set thr_mid = 55
+set rateprofile_name = 3550
+set thr_mid = 35
 set thr_expo = 50
 set roll_rc_rate = 12
 set pitch_rc_rate = 12
@@ -304,8 +297,8 @@ set pitch_srate = 73
 rateprofile 2
 
 # rateprofile 2
-set rateprofile_name = 6550
-set thr_mid = 65
+set rateprofile_name = 4550
+set thr_mid = 45
 set thr_expo = 50
 set roll_rc_rate = 12
 set pitch_rc_rate = 12
@@ -332,8 +325,8 @@ set roll_srate = 73
 set pitch_srate = 73
 
 # restore original rateprofile selection
-rateprofile 0
+rateprofile 2
 
 # save configuration
 save
-# 
+#
