@@ -1,3 +1,5 @@
+diff all
+
 # version
 # Betaflight / STM32F411 (S411) 4.5.2 Jul 22 2025 / 20:03:09 (e7c661dcb) MSP API: 1.46
 # config rev: 24b283a
@@ -11,7 +13,7 @@ defaults nosave
 board_name HGLRCF411ELRS
 manufacturer_id HGLR
 mcu_id 0045003d3233510d39363337
-signature
+signature 
 
 # name: Draknight O4
 
@@ -177,114 +179,116 @@ set ez_landing_limit = 5
 profile 1
 
 # profile 1
-set profile_name = freedot8
-set dterm_lpf1_dyn_min_hz = 71
-set dterm_lpf1_dyn_max_hz = 142
-set dterm_lpf1_static_hz = 71
-set dterm_lpf2_static_hz = 142
+set profile_name = uav55
+set dterm_lpf1_dyn_min_hz = 90
+set dterm_lpf1_dyn_max_hz = 180
+set dterm_lpf1_static_hz = 90
+set dterm_lpf2_static_hz = 180
 set vbat_sag_compensation = 100
-set i_pitch = 29
-set d_pitch = 48
-set f_pitch = 107
-set p_roll = 37
-set i_roll = 23
-set d_roll = 38
-set f_roll = 86
-set p_yaw = 37
-set i_yaw = 23
-set f_yaw = 86
+set pidsum_limit = 1000
+set pidsum_limit_yaw = 1000
+set yaw_lowpass_hz = 0
+set p_pitch = 72
+set i_pitch = 130
+set d_pitch = 47
+set f_pitch = 193
+set p_roll = 69
+set i_roll = 124
+set d_roll = 41
+set f_roll = 186
+set p_yaw = 69
+set i_yaw = 124
+set f_yaw = 186
 set angle_p_gain = 45
 set horizon_level_strength = 45
-set d_min_roll = 28
-set d_min_pitch = 35
+set d_min_roll = 41
+set d_min_pitch = 47
 set thrust_linear = 40
 set dyn_idle_min_rpm = 35
-set simplified_master_multiplier = 80
-set simplified_i_gain = 35
-set simplified_d_gain = 120
-set simplified_pi_gain = 105
-set simplified_feedforward_gain = 90
-set simplified_pitch_d_gain = 110
-set simplified_pitch_pi_gain = 120
-set simplified_dterm_filter_multiplier = 95
+set simplified_master_multiplier = 155
+set simplified_d_gain = 90
+set simplified_dmax_gain = 0
+set simplified_dterm_filter_multiplier = 120
+set ez_landing_limit = 5
 
 profile 2
 
 # profile 2
-set profile_name = freedot9
-set dterm_lpf1_dyn_min_hz = 71
-set dterm_lpf1_dyn_max_hz = 142
-set dterm_lpf1_static_hz = 71
-set dterm_lpf2_static_hz = 142
+set profile_name = uav60
+set dterm_lpf1_dyn_min_hz = 90
+set dterm_lpf1_dyn_max_hz = 180
+set dterm_lpf1_static_hz = 90
+set dterm_lpf2_static_hz = 180
 set vbat_sag_compensation = 100
-set p_pitch = 53
-set i_pitch = 33
-set d_pitch = 54
-set f_pitch = 121
-set p_roll = 42
-set i_roll = 26
+set pidsum_limit = 1000
+set pidsum_limit_yaw = 1000
+set yaw_lowpass_hz = 0
+set p_pitch = 75
+set i_pitch = 134
+set d_pitch = 48
+set f_pitch = 199
+set p_roll = 71
+set i_roll = 127
 set d_roll = 43
-set f_roll = 97
-set p_yaw = 42
-set i_yaw = 26
-set f_yaw = 97
+set f_roll = 191
+set p_yaw = 71
+set i_yaw = 127
+set f_yaw = 191
 set angle_p_gain = 45
 set horizon_level_strength = 45
-set d_min_roll = 32
-set d_min_pitch = 40
+set d_min_roll = 43
+set d_min_pitch = 48
 set thrust_linear = 40
 set dyn_idle_min_rpm = 35
-set simplified_master_multiplier = 90
-set simplified_i_gain = 35
-set simplified_d_gain = 120
-set simplified_pi_gain = 105
-set simplified_feedforward_gain = 90
-set simplified_pitch_d_gain = 110
-set simplified_pitch_pi_gain = 120
-set simplified_dterm_filter_multiplier = 95
+set simplified_master_multiplier = 160
+set simplified_d_gain = 90
+set simplified_dmax_gain = 0
+set simplified_dterm_filter_multiplier = 120
+set ez_landing_limit = 5
 
 profile 3
 
 # profile 3
-set profile_name = free1
-set dterm_lpf1_dyn_min_hz = 71
-set dterm_lpf1_dyn_max_hz = 142
-set dterm_lpf1_static_hz = 71
-set dterm_lpf2_static_hz = 142
+set profile_name = uav65
+set dterm_lpf1_dyn_min_hz = 90
+set dterm_lpf1_dyn_max_hz = 180
+set dterm_lpf1_static_hz = 90
+set dterm_lpf2_static_hz = 180
 set vbat_sag_compensation = 100
-set p_pitch = 59
-set i_pitch = 37
-set d_pitch = 60
-set f_pitch = 134
-set p_roll = 47
-set i_roll = 29
-set d_roll = 47
-set f_roll = 108
-set p_yaw = 47
-set i_yaw = 29
-set f_yaw = 108
+set pidsum_limit = 1000
+set pidsum_limit_yaw = 1000
+set yaw_lowpass_hz = 0
+set p_pitch = 77
+set i_pitch = 138
+set d_pitch = 50
+set f_pitch = 206
+set p_roll = 74
+set i_roll = 132
+set d_roll = 44
+set f_roll = 198
+set p_yaw = 74
+set i_yaw = 132
+set f_yaw = 198
 set angle_p_gain = 45
 set horizon_level_strength = 45
-set d_min_roll = 35
-set d_min_pitch = 44
+set d_min_roll = 44
+set d_min_pitch = 50
 set thrust_linear = 40
 set dyn_idle_min_rpm = 35
-set simplified_i_gain = 35
-set simplified_d_gain = 120
-set simplified_pi_gain = 105
-set simplified_feedforward_gain = 90
-set simplified_pitch_d_gain = 110
-set simplified_pitch_pi_gain = 120
-set simplified_dterm_filter_multiplier = 95
+set simplified_master_multiplier = 165
+set simplified_d_gain = 90
+set simplified_dmax_gain = 0
+set simplified_dterm_filter_multiplier = 120
+set ez_landing_limit = 5
 
 # restore original profile selection
-profile 1
+profile 0
 
 rateprofile 0
 
 # rateprofile 0
-set rateprofile_name = 1550
-set thr_mid = 15
+set rateprofile_name = 4050
+set thr_mid = 40
 set thr_expo = 50
 set roll_rc_rate = 13
 set pitch_rc_rate = 13
@@ -298,8 +302,7 @@ set pitch_srate = 73
 rateprofile 1
 
 # rateprofile 1
-set rateprofile_name = 2050
-set thr_mid = 20
+set rateprofile_name = 5050
 set thr_expo = 50
 set roll_rc_rate = 13
 set pitch_rc_rate = 13
@@ -313,8 +316,8 @@ set pitch_srate = 73
 rateprofile 2
 
 # rateprofile 2
-set rateprofile_name = 2550
-set thr_mid = 25
+set rateprofile_name = 6050
+set thr_mid = 60
 set thr_expo = 50
 set roll_rc_rate = 13
 set pitch_rc_rate = 13
@@ -328,8 +331,8 @@ set pitch_srate = 73
 rateprofile 3
 
 # rateprofile 3
-set rateprofile_name = 3050
-set thr_mid = 30
+set rateprofile_name = 7550
+set thr_mid = 75
 set thr_expo = 50
 set roll_rc_rate = 13
 set pitch_rc_rate = 13
@@ -341,8 +344,8 @@ set roll_srate = 73
 set pitch_srate = 73
 
 # restore original rateprofile selection
-rateprofile 0
+rateprofile 1
 
 # save configuration
 save
-#
+# 
