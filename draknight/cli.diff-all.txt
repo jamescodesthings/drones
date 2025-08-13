@@ -1,4 +1,4 @@
-diff all
+# diff all
 
 # version
 # Betaflight / STM32F411 (S411) 4.5.2 Jul 22 2025 / 20:03:09 (e7c661dcb) MSP API: 1.46
@@ -13,7 +13,7 @@ defaults nosave
 board_name HGLRCF411ELRS
 manufacturer_id HGLR
 mcu_id 0045003d3233510d39363337
-signature 
+signature
 
 # name: Draknight O4
 
@@ -59,7 +59,7 @@ set osd_units = BRITISH
 set osd_warn_bitmask = 8063
 set osd_vbat_pos = 608
 set osd_rssi_pos = 377
-set osd_link_quality_pos = 2624
+set osd_link_quality_pos = 3689
 set osd_link_tx_power_pos = 234
 set osd_rssi_dbm_pos = 234
 set osd_rsnr_pos = 234
@@ -69,7 +69,7 @@ set osd_remaining_time_estimate_pos = 234
 set osd_flymode_pos = 3665
 set osd_anti_gravity_pos = 234
 set osd_g_force_pos = 234
-set osd_throttle_pos = 2560
+set osd_throttle_pos = 3633
 set osd_vtx_channel_pos = 16928
 set osd_crosshairs_pos = 205
 set osd_ah_sbar_pos = 206
@@ -96,7 +96,7 @@ set osd_debug_pos = 234
 set osd_power_pos = 234
 set osd_pidrate_profile_pos = 234
 set osd_warnings_pos = 14965
-set osd_avg_cell_voltage_pos = 2656
+set osd_avg_cell_voltage_pos = 3683
 set osd_pit_ang_pos = 234
 set osd_rol_ang_pos = 234
 set osd_battery_usage_pos = 234
@@ -109,8 +109,8 @@ set osd_esc_rpm_pos = 234
 set osd_esc_rpm_freq_pos = 234
 set osd_rtc_date_time_pos = 234
 set osd_adjustment_range_pos = 234
-set osd_flip_arrow_pos = 3636
-set osd_core_temp_pos = 2592
+set osd_flip_arrow_pos = 3604
+set osd_core_temp_pos = 2656
 set osd_log_status_pos = 234
 set osd_stick_overlay_left_pos = 234
 set osd_stick_overlay_right_pos = 234
@@ -282,7 +282,7 @@ set simplified_dterm_filter_multiplier = 120
 set ez_landing_limit = 5
 
 # restore original profile selection
-profile 0
+profile 1
 
 rateprofile 0
 
@@ -344,8 +344,8 @@ set roll_srate = 73
 set pitch_srate = 73
 
 # restore original rateprofile selection
-rateprofile 1
+rateprofile 0
 
 # save configuration
 save
-# 
+#
