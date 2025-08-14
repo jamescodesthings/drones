@@ -1,3 +1,5 @@
+# diff all
+
 # version
 # Betaflight / STM32F405 (S405) 4.5.2 Jul 12 2025 / 20:32:41 (norevision) MSP API: 1.46
 # config rev: 24b283a
@@ -91,21 +93,21 @@ set simplified_gyro_filter_multiplier = 60
 set osd_rssi_dbm_alarm = -100
 set osd_vbat_pos = 513
 set osd_rssi_pos = 192
-set osd_link_quality_pos = 2624
+set osd_link_quality_pos = 3689
 set osd_rssi_dbm_pos = 416
 set osd_rsnr_pos = 160
 set osd_tim_2_pos = 3695
 set osd_flymode_pos = 3665
-set osd_throttle_pos = 2592
+set osd_throttle_pos = 3633
 set osd_crosshairs_pos = 313
 set osd_current_pos = 544
 set osd_craft_name_pos = 3088
 set osd_pilot_name_pos = 2067
 set osd_warnings_pos = 14965
-set osd_avg_cell_voltage_pos = 2656
+set osd_avg_cell_voltage_pos = 3683
 set osd_disarmed_pos = 2646
 set osd_esc_tmp_pos = 129
-set osd_flip_arrow_pos = 3636
+set osd_flip_arrow_pos = 3604
 set osd_core_temp_pos = 225
 set osd_log_status_pos = 512
 set osd_rate_profile_name_pos = 2080
@@ -263,7 +265,7 @@ set simplified_dterm_filter_multiplier = 120
 set ez_landing_limit = 5
 
 # restore original profile selection
-profile 0
+profile 1
 
 rateprofile 0
 
@@ -326,7 +328,7 @@ set roll_srate = 73
 set pitch_srate = 73
 
 # restore original rateprofile selection
-rateprofile 0
+rateprofile 1
 
 # save configuration
 save
