@@ -1,0 +1,363 @@
+diff all
+
+# version
+# Betaflight / STM32F411 (S411) 4.5.2 Aug 15 2025 / 09:22:21 (e7c661dcb) MSP API: 1.46
+# config rev: 24b283a
+
+# start the command batch
+batch start
+
+# reset configuration to default settings
+defaults nosave
+
+board_name CRAZYBEEF4DX
+manufacturer_id HAMO
+mcu_id 0061004e3132510b38393931
+signature 
+
+# name: micro
+
+# resources
+resource FLASH_CS 1 NONE
+
+# dma
+dma ADC 1 0
+# ADC 1: DMA2 Stream 0 Channel 0
+dma pin A09 NONE
+dma pin A10 NONE
+
+# feature
+feature -AIRMODE
+feature OSD
+
+# serial
+serial 0 131073 115200 57600 0 115200
+
+# beacon
+beacon RX_LOST
+beacon RX_SET
+
+# aux
+aux 0 0 0 1800 2100 0 0
+aux 1 1 1 1800 2100 0 0
+aux 2 13 3 1800 2100 0 0
+aux 3 28 1 900 1200 0 0
+aux 4 35 2 1800 2100 0 0
+
+# master
+set dyn_notch_count = 2
+set dyn_notch_min_hz = 125
+set dyn_notch_max_hz = 850
+set acc_calibration = -10,27,-21,1
+set rc_smoothing_auto_factor = 120
+set fpv_mix_degrees = 15
+set blackbox_device = SERIAL
+set dshot_burst = OFF
+set dshot_bidir = ON
+set motor_poles = 12
+set failsafe_recovery_delay = 10
+set vbat_max_cell_voltage = 440
+set vbat_min_cell_voltage = 320
+set vbat_warning_cell_voltage = 330
+set ibata_scale = 470
+set yaw_motors_reversed = ON
+set small_angle = 180
+set deadband = 1
+set yaw_deadband = 1
+set pid_process_denom = 2
+set osd_warn_bitmask = 8063
+set osd_alt_alarm = 120
+set osd_vbat_pos = 234
+set osd_rssi_pos = 314
+set osd_link_quality_pos = 7785
+set osd_link_tx_power_pos = 234
+set osd_rssi_dbm_pos = 312
+set osd_rsnr_pos = 234
+set osd_tim_1_pos = 234
+set osd_tim_2_pos = 7791
+set osd_remaining_time_estimate_pos = 234
+set osd_flymode_pos = 7761
+set osd_anti_gravity_pos = 234
+set osd_g_force_pos = 234
+set osd_throttle_pos = 3633
+set osd_vtx_channel_pos = 21554
+set osd_crosshairs_pos = 205
+set osd_ah_sbar_pos = 206
+set osd_ah_pos = 78
+set osd_current_pos = 288
+set osd_mah_drawn_pos = 320
+set osd_wh_drawn_pos = 234
+set osd_motor_diag_pos = 234
+set osd_craft_name_pos = 3087
+set osd_pilot_name_pos = 2067
+set osd_gps_speed_pos = 234
+set osd_gps_lon_pos = 234
+set osd_gps_lat_pos = 234
+set osd_gps_sats_pos = 234
+set osd_home_dir_pos = 234
+set osd_home_dist_pos = 234
+set osd_flight_dist_pos = 234
+set osd_compass_bar_pos = 234
+set osd_altitude_pos = 16728
+set osd_pid_roll_pos = 234
+set osd_pid_pitch_pos = 234
+set osd_pid_yaw_pos = 234
+set osd_debug_pos = 4097
+set osd_power_pos = 234
+set osd_pidrate_profile_pos = 234
+set osd_warnings_pos = 6773
+set osd_avg_cell_voltage_pos = 7779
+set osd_pit_ang_pos = 234
+set osd_rol_ang_pos = 234
+set osd_battery_usage_pos = 33121
+set osd_disarmed_pos = 6743
+set osd_nheading_pos = 234
+set osd_up_down_reference_pos = 205
+set osd_ready_mode_pos = 234
+set osd_esc_tmp_pos = 4289
+set osd_esc_rpm_pos = 234
+set osd_esc_rpm_freq_pos = 234
+set osd_rtc_date_time_pos = 234
+set osd_adjustment_range_pos = 234
+set osd_flip_arrow_pos = 3604
+set osd_core_temp_pos = 4321
+set osd_log_status_pos = 234
+set osd_stick_overlay_left_pos = 234
+set osd_stick_overlay_right_pos = 234
+set osd_rate_profile_name_pos = 2080
+set osd_pid_profile_name_pos = 2048
+set osd_profile_name_pos = 234
+set osd_rcchannels_pos = 234
+set osd_camera_frame_pos = 35
+set osd_efficiency_pos = 234
+set osd_total_flights_pos = 234
+set osd_aux_pos = 234
+set osd_sys_goggle_voltage_pos = 234
+set osd_sys_vtx_voltage_pos = 4193
+set osd_sys_bitrate_pos = 4161
+set osd_sys_delay_pos = 4129
+set osd_sys_distance_pos = 234
+set osd_sys_lq_pos = 234
+set osd_sys_goggle_dvr_pos = 234
+set osd_sys_vtx_dvr_pos = 234
+set osd_sys_warnings_pos = 234
+set osd_sys_vtx_temp_pos = 4225
+set osd_sys_fan_speed_pos = 234
+set osd_stat_bitmask = 0
+set debug_mode = RX_EXPRESSLRS_SPI
+set displayport_msp_fonts = 0,0,0,0
+set pinio_box = 40,41,255,255
+set flash_spi_bus = 0
+set gyro_2_bustype = SPI
+set gyro_2_sensor_align = CW0
+set rpm_filter_harmonics = 2
+set craft_name = micro
+set pilot_name = jamescodesthings
+
+profile 0
+
+# profile 0
+set profile_name = uav
+set dterm_lpf1_dyn_min_hz = 90
+set dterm_lpf1_dyn_max_hz = 180
+set dterm_lpf1_static_hz = 90
+set dterm_lpf2_static_hz = 180
+set vbat_sag_compensation = 100
+set pidsum_limit = 1000
+set pidsum_limit_yaw = 1000
+set yaw_lowpass_hz = 0
+set p_pitch = 70
+set i_pitch = 126
+set d_pitch = 45
+set f_pitch = 187
+set p_roll = 67
+set i_roll = 120
+set f_roll = 180
+set p_yaw = 67
+set i_yaw = 120
+set f_yaw = 180
+set angle_p_gain = 45
+set horizon_level_strength = 45
+set d_min_roll = 40
+set d_min_pitch = 45
+set thrust_linear = 40
+set dyn_idle_min_rpm = 35
+set simplified_master_multiplier = 150
+set simplified_d_gain = 90
+set simplified_dmax_gain = 0
+set simplified_dterm_filter_multiplier = 120
+set ez_landing_limit = 5
+
+profile 1
+
+# profile 1
+set profile_name = uav55
+set dterm_lpf1_dyn_min_hz = 90
+set dterm_lpf1_dyn_max_hz = 180
+set dterm_lpf1_static_hz = 90
+set dterm_lpf2_static_hz = 180
+set vbat_sag_compensation = 100
+set pidsum_limit = 1000
+set pidsum_limit_yaw = 1000
+set yaw_lowpass_hz = 0
+set p_pitch = 72
+set i_pitch = 130
+set d_pitch = 47
+set f_pitch = 193
+set p_roll = 69
+set i_roll = 124
+set d_roll = 41
+set f_roll = 186
+set p_yaw = 69
+set i_yaw = 124
+set f_yaw = 186
+set angle_p_gain = 45
+set horizon_level_strength = 45
+set d_min_roll = 41
+set d_min_pitch = 47
+set thrust_linear = 40
+set dyn_idle_min_rpm = 35
+set simplified_master_multiplier = 155
+set simplified_d_gain = 90
+set simplified_dmax_gain = 0
+set simplified_dterm_filter_multiplier = 120
+set ez_landing_limit = 5
+
+profile 2
+
+# profile 2
+set profile_name = uav60
+set dterm_lpf1_dyn_min_hz = 90
+set dterm_lpf1_dyn_max_hz = 180
+set dterm_lpf1_static_hz = 90
+set dterm_lpf2_static_hz = 180
+set vbat_sag_compensation = 100
+set pidsum_limit = 1000
+set pidsum_limit_yaw = 1000
+set yaw_lowpass_hz = 0
+set p_pitch = 75
+set i_pitch = 134
+set d_pitch = 48
+set f_pitch = 199
+set p_roll = 71
+set i_roll = 127
+set d_roll = 43
+set f_roll = 191
+set p_yaw = 71
+set i_yaw = 127
+set f_yaw = 191
+set angle_p_gain = 45
+set horizon_level_strength = 45
+set d_min_roll = 43
+set d_min_pitch = 48
+set thrust_linear = 40
+set dyn_idle_min_rpm = 35
+set simplified_master_multiplier = 160
+set simplified_d_gain = 90
+set simplified_dmax_gain = 0
+set simplified_dterm_filter_multiplier = 120
+set ez_landing_limit = 5
+
+profile 3
+
+# profile 3
+set profile_name = uav65
+set dterm_lpf1_dyn_min_hz = 90
+set dterm_lpf1_dyn_max_hz = 180
+set dterm_lpf1_static_hz = 90
+set dterm_lpf2_static_hz = 180
+set vbat_sag_compensation = 100
+set pidsum_limit = 1000
+set pidsum_limit_yaw = 1000
+set yaw_lowpass_hz = 0
+set p_pitch = 77
+set i_pitch = 138
+set d_pitch = 50
+set f_pitch = 206
+set p_roll = 74
+set i_roll = 132
+set d_roll = 44
+set f_roll = 198
+set p_yaw = 74
+set i_yaw = 132
+set f_yaw = 198
+set angle_p_gain = 45
+set horizon_level_strength = 45
+set d_min_roll = 44
+set d_min_pitch = 50
+set thrust_linear = 40
+set dyn_idle_min_rpm = 35
+set simplified_master_multiplier = 165
+set simplified_d_gain = 90
+set simplified_dmax_gain = 0
+set simplified_dterm_filter_multiplier = 120
+set ez_landing_limit = 5
+
+# restore original profile selection
+profile 0
+
+rateprofile 0
+
+# rateprofile 0
+set rateprofile_name = 4050
+set thr_mid = 40
+set thr_expo = 50
+set roll_rc_rate = 13
+set pitch_rc_rate = 13
+set yaw_rc_rate = 13
+set roll_expo = 40
+set pitch_expo = 40
+set yaw_expo = 40
+set roll_srate = 73
+set pitch_srate = 73
+
+rateprofile 1
+
+# rateprofile 1
+set rateprofile_name = 5050
+set thr_expo = 50
+set roll_rc_rate = 13
+set pitch_rc_rate = 13
+set yaw_rc_rate = 13
+set roll_expo = 40
+set pitch_expo = 40
+set yaw_expo = 40
+set roll_srate = 73
+set pitch_srate = 73
+
+rateprofile 2
+
+# rateprofile 2
+set rateprofile_name = 6050
+set thr_mid = 60
+set thr_expo = 50
+set roll_rc_rate = 13
+set pitch_rc_rate = 13
+set yaw_rc_rate = 13
+set roll_expo = 40
+set pitch_expo = 40
+set yaw_expo = 40
+set roll_srate = 73
+set pitch_srate = 73
+
+rateprofile 3
+
+# rateprofile 3
+set rateprofile_name = 7550
+set thr_mid = 75
+set thr_expo = 50
+set roll_rc_rate = 13
+set pitch_rc_rate = 13
+set yaw_rc_rate = 13
+set roll_expo = 40
+set pitch_expo = 40
+set yaw_expo = 40
+set roll_srate = 73
+set pitch_srate = 73
+
+# restore original rateprofile selection
+rateprofile 0
+
+# save configuration
+save
+# 
