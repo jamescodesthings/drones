@@ -1,3 +1,5 @@
+diff all
+
 # version
 # Betaflight / STM32F411 (S411) 4.5.2 Aug 19 2025 / 11:32:28 (norevision) MSP API: 1.46
 # config rev: 24b283a
@@ -11,7 +13,7 @@ defaults nosave
 board_name JHEF411
 manufacturer_id JHEF
 mcu_id 005a00593034510f32373331
-signature
+signature 
 
 # name: MICRO
 
@@ -191,22 +193,23 @@ set vbat_sag_compensation = 100
 set pidsum_limit = 1000
 set pidsum_limit_yaw = 1000
 set yaw_lowpass_hz = 0
-set p_pitch = 70
-set i_pitch = 126
-set d_pitch = 45
-set f_pitch = 187
-set p_roll = 67
-set i_roll = 120
-set f_roll = 180
-set p_yaw = 67
-set i_yaw = 120
-set f_yaw = 180
+set p_pitch = 72
+set i_pitch = 130
+set d_pitch = 47
+set f_pitch = 193
+set p_roll = 69
+set i_roll = 124
+set d_roll = 41
+set f_roll = 186
+set p_yaw = 69
+set i_yaw = 124
+set f_yaw = 186
 set angle_p_gain = 30
-set d_min_roll = 40
-set d_min_pitch = 45
+set d_min_roll = 41
+set d_min_pitch = 47
 set thrust_linear = 40
 set dyn_idle_min_rpm = 35
-set simplified_master_multiplier = 150
+set simplified_master_multiplier = 155
 set simplified_d_gain = 90
 set simplified_dmax_gain = 0
 set simplified_dterm_filter_multiplier = 120
@@ -215,7 +218,7 @@ set ez_landing_limit = 5
 profile 2
 
 # profile 2
-set profile_name = UAV58
+set profile_name = UAV60
 set dterm_lpf1_dyn_min_hz = 90
 set dterm_lpf1_dyn_max_hz = 180
 set dterm_lpf1_static_hz = 90
@@ -224,22 +227,23 @@ set vbat_sag_compensation = 100
 set pidsum_limit = 1000
 set pidsum_limit_yaw = 1000
 set yaw_lowpass_hz = 0
-set p_pitch = 70
-set i_pitch = 126
-set d_pitch = 45
-set f_pitch = 187
-set p_roll = 67
-set i_roll = 120
-set f_roll = 180
-set p_yaw = 67
-set i_yaw = 120
-set f_yaw = 180
+set p_pitch = 75
+set i_pitch = 134
+set d_pitch = 48
+set f_pitch = 199
+set p_roll = 71
+set i_roll = 127
+set d_roll = 43
+set f_roll = 191
+set p_yaw = 71
+set i_yaw = 127
+set f_yaw = 191
 set angle_p_gain = 30
-set d_min_roll = 40
-set d_min_pitch = 45
+set d_min_roll = 43
+set d_min_pitch = 48
 set thrust_linear = 40
 set dyn_idle_min_rpm = 35
-set simplified_master_multiplier = 150
+set simplified_master_multiplier = 160
 set simplified_d_gain = 90
 set simplified_dmax_gain = 0
 set simplified_dterm_filter_multiplier = 120
@@ -261,7 +265,7 @@ set d_min_pitch = 37
 set simplified_pids_mode = OFF
 
 # restore original profile selection
-profile 0
+profile 1
 
 rateprofile 0
 
@@ -324,8 +328,8 @@ set roll_srate = 73
 set pitch_srate = 73
 
 # restore original rateprofile selection
-rateprofile 0
+rateprofile 1
 
 # save configuration
 save
-#
+# 
